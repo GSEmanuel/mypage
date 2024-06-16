@@ -10,6 +10,7 @@ a{
 	font-family: 'Rubik', sans-serif;
 	color: #034d6c;
 	text-decoration: none;
+	font-weight: 700;
 	
 }
 
@@ -24,6 +25,8 @@ html body header{
 	background-color: #fff;
 	box-shadow: 3px 0 5px #aaa;
 	padding:15px 30px;
+	position: relative;
+	z-index: 2;
 }
 
 header .logo{
@@ -38,4 +41,36 @@ html body nav ul{
 	list-style-type: none;
 	font-size: 16px;
 	
+}
+
+html body nav ul li {
+	display: inline-block;
+}
+
+html body nav ul li a {
+	padding: 0 15px;
+	
+}
+
+img {
+	width: 450px;
+}
+
+.hero {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	background-color: #fff;
+	padding: 20px 50px;
+	justify-content: center;
+}
+
+.hero .hero-content {
+	width: 960px;
+	display: flex;
+	flex-direction: row;
+}
+
+.hero h1{
+	font-family: 'Rufina', sans-serif;
 }
