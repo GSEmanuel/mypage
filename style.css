@@ -74,3 +74,17 @@ img {
 .hero h1{
 	font-family: 'Rufina', sans-serif;
 }
+
+.left{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+@media (max-width: 960px) {
+	.hero .hero-content {
+		display: flex;
+		flex-direction: column;
+	}
+}
