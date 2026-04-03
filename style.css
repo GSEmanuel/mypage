@@ -82,6 +82,7 @@ img {
 	align-items: center;
 }
 
+/*con esto vamos a poner el diseño adaptativo*/
 @media (max-width: 960px) {
 	.hero .hero-content {
 		display: flex;
