@@ -1,35 +1,38 @@
-body{
+/* ===== BASE ===== */
+body {
 	background-color: #efefef;
 	font-family: 'Rubik', sans-serif;
-	margin: 0px;
+	margin: 0;
 	color: #034d6c;
 }
 
-a{
+a {
 	transition: color 0.3s ease;
 	font-family: 'Rubik', sans-serif;
 	color: #034d6c;
 	text-decoration: none;
 	font-weight: 700;
-	
 }
 
-a:hover{
+a:hover {
 	color: #f84f07;
 }
 
-
-html body header{
+/* ===== HEADER ===== */
+html body header {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	background-color: #fff;
 	box-shadow: 3px 0 5px #aaa;
-	padding:15px 30px;
+	padding: 15px 30px;
 	position: relative;
 	z-index: 2;
+	flex-wrap: wrap;
+	gap: 10px;
 }
 
-header .logo{
+header .logo {
 	font-size: 20px;
 	font-family: 'Rubik', sans-serif;
 	font-weight: 700;
@@ -37,10 +40,15 @@ header .logo{
 	align-items: center;
 }
 
-html body nav ul{
+/* ===== NAV ===== */
+html body nav ul {
 	list-style-type: none;
 	font-size: 16px;
-	
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
 }
 
 html body nav ul li {
@@ -49,13 +57,17 @@ html body nav ul li {
 
 html body nav ul li a {
 	padding: 0 15px;
-	
 }
 
+/* ===== IMAGEN ===== */
 img {
-	width: 450px;
+	width: 100%;
+	max-width: 450px;
+	height: auto;
+	display: block;
 }
 
+/* ===== HERO ===== */
 .hero {
 	position: relative;
 	z-index: 1;
@@ -66,26 +78,98 @@ img {
 }
 
 .hero .hero-content {
-	width: 960px;
+	width: 100%;
+	max-width: 960px;
 	display: flex;
 	flex-direction: row;
+	gap: 30px;
 }
 
-.hero h1{
+.hero h1 {
 	font-family: 'Rufina', sans-serif;
+	font-size: clamp(1.5rem, 4vw, 2.5rem);
+	margin-top: 0;
 }
 
-.left{
+.hero p {
+	font-size: clamp(0.95rem, 2vw, 1.1rem);
+	line-height: 1.6;
+}
+
+.left {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	flex: 1;
 }
 
-/*con esto vamos a poner el diseño adaptativo*/
-@media (max-width: 960px) {
+.right {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+}
+
+/* ===== DESCRIPCIÓN ===== */
+body > div:last-of-type {
+	max-width: 960px;
+	margin: 30px auto;
+	padding: 0 30px;
+	font-size: clamp(0.9rem, 2vw, 1rem);
+	line-height: 1.7;
+}
+
+/* ===== RESPONSIVE: tablets ===== */
+@media (max-width: 768px) {
+	.hero {
+		padding: 20px 25px;
+	}
+
 	.hero .hero-content {
-		display: flex;
 		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.left {
+		align-items: center;
+	}
+
+	img {
+		max-width: 320px;
+	}
+}
+
+/* ===== RESPONSIVE: móviles ===== */
+@media (max-width: 480px) {
+	html body header {
+		padding: 12px 15px;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	header .logo {
+		font-size: 17px;
+	}
+
+	html body nav ul {
+		font-size: 14px;
+	}
+
+	html body nav ul li a {
+		padding: 0 8px;
+	}
+
+	.hero {
+		padding: 15px;
+	}
+
+	img {
+		max-width: 260px;
+	}
+
+	body > div:last-of-type {
+		padding: 0 15px;
+		margin: 20px auto;
 	}
 }
