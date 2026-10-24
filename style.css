@@ -119,6 +119,67 @@ body > div:last-of-type {
 	line-height: 1.7;
 }
 
+/* ===== PROYECTOS ===== */
+.proyectos {
+	max-width: 960px;
+	margin: 40px auto;
+	padding: 0 30px;
+}
+
+.proyectos h2 {
+	font-family: 'Rufina', sans-serif;
+	font-size: clamp(1.2rem, 3vw, 1.6rem);
+	color: #034d6c;
+	margin-bottom: 25px;
+}
+
+.proyectos-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+
+.proyecto-card {
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 25px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+	display: flex;
+	flex-direction: column;
+	transition: box-shadow 0.3s ease;
+}
+
+.proyecto-card:hover {
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.proyecto-card h3 {
+	font-size: 1.1rem;
+	margin: 0 0 10px 0;
+	color: #034d6c;
+}
+
+.proyecto-card p {
+	font-size: 0.95rem;
+	line-height: 1.6;
+	color: #555;
+	flex: 1;
+	margin: 0 0 15px 0;
+}
+
+.proyecto-card a {
+	color: #f84f07;
+	font-weight: 700;
+	font-size: 0.95rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+	background-color: #034d6c;
+	height: 40px;
+	margin-top: 40px;
+}
+
 /* ===== RESPONSIVE: tablets ===== */
 @media (max-width: 768px) {
 	.hero {
@@ -137,6 +198,11 @@ body > div:last-of-type {
 
 	img {
 		max-width: 320px;
+	}
+
+	.proyectos-grid {
+		grid-template-columns: 1fr;
+		max-width: 400px;
 	}
 }
 
@@ -171,5 +237,9 @@ body > div:last-of-type {
 	body > div:last-of-type {
 		padding: 0 15px;
 		margin: 20px auto;
+	}
+
+	.proyectos {
+		padding: 0 15px;
 	}
 }
