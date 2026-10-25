@@ -173,6 +173,42 @@ body > div:last-of-type {
 	font-size: 0.95rem;
 }
 
+/* ===== CONTACTO ===== */
+.contacto {
+	max-width: 960px;
+	margin: 50px auto;
+	padding: 40px 30px;
+	text-align: center;
+}
+
+.contacto h2 {
+	font-family: 'Rufina', sans-serif;
+	font-size: clamp(1.2rem, 3vw, 1.6rem);
+	color: #034d6c;
+	margin-bottom: 10px;
+}
+
+.contacto p {
+	font-size: clamp(0.9rem, 2vw, 1rem);
+	color: #555;
+	margin-bottom: 25px;
+}
+
+.contacto-email {
+	display: inline-block;
+	background-color: #034d6c;
+	color: #fff !important;
+	padding: 12px 30px;
+	border-radius: 8px;
+	font-size: 1rem;
+	font-weight: 700;
+	transition: background-color 0.3s ease;
+}
+
+.contacto-email:hover {
+	background-color: #f84f07;
+}
+
 /* ===== FOOTER ===== */
 footer {
 	background-color: #034d6c;
